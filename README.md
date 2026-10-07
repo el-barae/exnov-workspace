@@ -14,17 +14,17 @@ L’espace **Plans 2D**, accessible depuis la navigation ou `/plans`, propose un
 
 ### Factures et devis
 
-![Écran Factures et devis](zed:///agent/pasted-image?name=Screenshot%20From%202026-10-07%2013-09-17.png)
+![Écran Factures et devis](docs/images/Screenshot%20From%202026-10-07%2013-09-17.png)
 
-![Aperçu d’une facture](zed:///agent/pasted-image?name=Screenshot%20From%202026-10-07%2013-09-48.png)
+![Aperçu d’une facture](docs/images/Screenshot%20From%202026-10-07%2013-09-48.png)
 
 ### Projets et outils métier
 
-![Espace Projets](zed:///agent/pasted-image?name=Screenshot%20From%202026-10-07%2013-12-21.png)
+![Espace Projets](docs/images/Screenshot%20From%202026-10-07%2013-12-21.png)
 
-![Espace CPS IA](zed:///agent/pasted-image?name=Screenshot%20From%202026-10-07%2013-12-59.png)
+![Espace CPS IA](docs/images/Screenshot%20From%202026-10-07%2013-12-59.png)
 
-![Atelier Plans 2D](zed:///agent/pasted-image?name=Screenshot%20From%202026-10-07%2013-14-41.png)
+![Atelier Plans 2D](docs/images/Screenshot%20From%202026-10-07%2013-14-41.png)
 
 ## Démarrage
 
