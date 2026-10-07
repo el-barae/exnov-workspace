@@ -10,6 +10,22 @@ L’espace **CPS IA**, accessible dans la navigation et à `/cps`, génère un c
 
 L’espace **Plans 2D**, accessible depuis la navigation ou `/plans`, propose un éditeur de plans simple : murs avec épaisseur, portes et fenêtres liées, bibliothèque de symboles, pièces avec surfaces en m², lignes, rectangles, cercles, textes, cotes liées aux murs, panneaux repliables, calques, aimantation de 10 cm, mode orthogonal, déplacement, zoom et annuler/rétablir. En équipe, les brouillons de la bibliothèque restent en mémoire pendant la session ; **Enregistrer dans ce projet** partage le plan et permet de le retrouver après rechargement. En démonstration, la bibliothèque utilise le stockage du navigateur. Les exports **PDF à l’échelle avec cartouche EXNOV** (A4/A3), **SVG** et **DXF en mètres** contiennent les calques visibles ; l’export **JSON** conserve tout le plan pour le réimporter et le modifier. L’exemple et chaque nouveau plan créent un document distinct. L’étape « CPS & plans » des projets ouvre aussi cet atelier ; **Enregistrer dans ce projet** ajoute un JSON modifiable (ou un DXF au choix). Depuis les documents du projet, **Modifier dans Plans 2D** rouvre le JSON ; **Enregistrer les modifications dans ce projet** actualise la même pièce sans doublon, avec protection contre les conflits entre onglets. Le dessin manuel fonctionne sans configuration IA. Le bouton **Assistant IA** permet de demander une création ou une modification en français, avec aperçu avant application et annulation possible. Il réutilise la configuration AWS Bedrock des rapports ; la consigne, la conversation et le plan courant sont transmis uniquement à l’envoi de la demande. Voir [le guide des plans](docs/plans.md). Vérification navigateur : `npm run test:plans`, `npm run test:plans-architecture` et `npm run test:plans-ai` avec le serveur démarré (réponses IA simulées pour le dernier).
 
+## Captures d’écran
+
+### Factures et devis
+
+![Écran Factures et devis](zed:///agent/pasted-image?name=Screenshot%20From%202026-10-07%2013-09-17.png)
+
+![Aperçu d’une facture](zed:///agent/pasted-image?name=Screenshot%20From%202026-10-07%2013-09-48.png)
+
+### Projets et outils métier
+
+![Espace Projets](zed:///agent/pasted-image?name=Screenshot%20From%202026-10-07%2013-12-21.png)
+
+![Espace CPS IA](zed:///agent/pasted-image?name=Screenshot%20From%202026-10-07%2013-12-59.png)
+
+![Atelier Plans 2D](zed:///agent/pasted-image?name=Screenshot%20From%202026-10-07%2013-14-41.png)
+
 ## Démarrage
 
 Prérequis : **Node.js 22** et npm.
