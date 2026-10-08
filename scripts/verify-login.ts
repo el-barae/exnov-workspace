@@ -16,7 +16,7 @@ try {
   page.on("pageerror", error => errors.push(String(error)));
   await page.setViewport({ width: 1440, height: 1000 });
   await page.goto(origin, { waitUntil: "networkidle0" });
-  await page.waitForSelector(".login-form");
+  await page.evaluate(() => (document.querySelector(".hero-btn-primary") as HTMLElement)?.click()); await page.waitForSelector(".login-form");
   assert.equal(await page.$(".app-header"), null);
   assert.equal(await page.$(".projects-workspace"), null);
   await page.click('.login-form button[type="submit"]');
@@ -74,17 +74,17 @@ try {
   await secondTab.goto(origin, { waitUntil: "networkidle0" });
   await secondTab.waitForSelector(".projects-workspace", { visible: true });
   await page.click('[aria-label="Se déconnecter"]');
-  await page.waitForSelector(".login-form");
-  await secondTab.waitForSelector(".login-form");
+  await page.evaluate(() => (document.querySelector(".hero-btn-primary") as HTMLElement)?.click()); await page.waitForSelector(".login-form");
+  await secondTab.evaluate(() => (document.querySelector(".hero-btn-primary") as HTMLElement)?.click()); await secondTab.waitForSelector(".login-form");
   assert.equal(new URL(page.url()).pathname, "/");
   await secondTab.close();
   await page.goBack();
-  await page.waitForSelector(".login-form");
+  await page.evaluate(() => (document.querySelector(".hero-btn-primary") as HTMLElement)?.click()); await page.waitForSelector(".login-form");
   assert.equal(await page.$(".app-header"), null);
 
   for (const url of ["/projets", "/cps", "/?service=rapports", "/?service=factures"]) {
     await page.goto(origin + url, { waitUntil: "networkidle0" });
-    await page.waitForSelector(".login-form");
+    await page.evaluate(() => (document.querySelector(".hero-btn-primary") as HTMLElement)?.click()); await page.waitForSelector(".login-form");
     assert.equal(await page.$(".app-header"), null, "La connexion précède chaque accès direct");
   }
   // Une connexion depuis un ancien lien ouvre également les projets en premier.
@@ -102,7 +102,7 @@ try {
   });
   await login(blocked, origin);
   await blocked.click('[aria-label="Se déconnecter"]');
-  await blocked.waitForSelector(".login-form");
+  await blocked.evaluate(() => (document.querySelector(".hero-btn-primary") as HTMLElement)?.click()); await blocked.waitForSelector(".login-form");
   await blocked.close();
   assert.deepEqual(errors, []);
   console.log("OK : connexion, validation, projets en premier, logo, session persistante, navigation, déconnexion multi-onglets, accès directs et mobile.");

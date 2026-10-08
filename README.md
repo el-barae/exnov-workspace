@@ -18,11 +18,11 @@ L’espace **Plans 2D**, accessible depuis la navigation ou `/plans`, propose un
 
 ![Aperçu d’une facture](docs/images/Screenshot%20From%202026-10-07%2013-09-48.png)
 
-### Projets et outils métier
+### CPS IA et Rapports IA
 
-![Espace Projets](docs/images/Screenshot%20From%202026-10-07%2013-12-21.png)
+![Générateur CPS IA](docs/images/Screenshot%20From%202026-10-07%2013-12-21.png)
 
-![Espace CPS IA](docs/images/Screenshot%20From%202026-10-07%2013-12-59.png)
+![Rapports IA - suivi de chantier](docs/images/Screenshot%20From%202026-10-07%2013-12-59.png)
 
 ![Atelier Plans 2D](docs/images/Screenshot%20From%202026-10-07%2013-14-41.png)
 

@@ -5,8 +5,9 @@ import { APP_NAME } from "@/config/app";
 import { ThemeToggle } from "./ThemeToggle";
 import { useState, type FormEvent } from "react";
 import { ArrowRight, BookOpen, Eye, EyeOff, FileText, FolderKanban, LockKeyhole, Mail, Sparkles } from "lucide-react";
+import { LandingPage } from "./LandingPage";
 
-export function Connexion({ onLogin, mode = "team" }: { onLogin: (email: string, password: string) => Promise<void>; mode?: "team" | "demo" }) {
+function ConnexionOriginal({ onLogin, mode = "team" }: { onLogin: (email: string, password: string) => Promise<void>; mode?: "team" | "demo" }) {
   const [showPassword, setShowPassword] = useState(false);
 
   const [busy, setBusy] = useState(false);
@@ -65,4 +66,42 @@ export function Connexion({ onLogin, mode = "team" }: { onLogin: (email: string,
     </div>
     <footer className="login-footer"><span>BET EXNOV · Bureau d’études génie civil</span><span>Tanger, Maroc</span></footer>
   </main>;
+}
+
+export function Connexion(props: { onLogin: (email: string, password: string) => Promise<void>; mode?: "team" | "demo" }) {
+  const [showLogin, setShowLogin] = useState(false);
+
+  if (showLogin) {
+    return (
+      <div style={{ position: "relative" }}>
+        <button
+          type="button"
+          onClick={() => setShowLogin(false)}
+          style={{
+            position: "absolute",
+            top: "24px",
+            left: "24px",
+            zIndex: 100,
+            background: "var(--surface)",
+            border: "1px solid var(--border)",
+            borderRadius: "8px",
+            cursor: "pointer",
+            display: "flex",
+            alignItems: "center",
+            gap: "8px",
+            fontSize: "13px",
+            color: "var(--text-muted)",
+            padding: "8px 12px",
+            boxShadow: "0 2px 10px rgba(0,0,0,0.05)"
+          }}
+        >
+          <ArrowRight size={14} style={{ transform: "rotate(180deg)" }} />
+          Retour à l'accueil
+        </button>
+        <ConnexionOriginal {...props} />
+      </div>
+    );
+  }
+
+  return <LandingPage onConnectClick={() => setShowLogin(true)} />;
 }

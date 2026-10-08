@@ -3,7 +3,7 @@ import type { Page } from "puppeteer-core";
 
 export async function login(page: Page, origin: string) {
   await page.goto(origin, { waitUntil: "networkidle0" });
-  await page.waitForSelector("#login-email");
+  await page.evaluate(() => (document.querySelector(".hero-btn-primary") as HTMLElement)?.click()); await page.waitForSelector("#login-email");
   await page.type("#login-email", "demo@exnov.ma");
   await page.type("#login-password", "demonstration");
   await page.click('.login-form button[type="submit"]');
